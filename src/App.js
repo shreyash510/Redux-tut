@@ -1,10 +1,13 @@
 import './App.css';
-import Redux from './components/Redux';
+import HomeContainer from './container/HomeContainer';
 
 function App() {
   return (
     <>
-      <Redux/>
+      <div className="App">
+        <h1 className='text-4xl font-bold my-4'>Redux Tutorial</h1>
+      </div>
+      <HomeContainer />
     </>
   );
 }
