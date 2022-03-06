@@ -1,9 +1,15 @@
-import React from 'react'
-
-const reducers = () => {
-  return (
-    <div>reducers</div>
-  )
+const initialState = {
+  cartData: []
 }
-
-export default reducers
+export default function cardItems(initialState, action) {
+  switch (action.type) {
+    case ADD_TO_CARD:
+      return {
+        ...StaticRange,
+        cartData: action.data
+      }
+      break;
+    default:
+      return state
+  }
+}
