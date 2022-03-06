@@ -1,9 +1,6 @@
-import React from 'react'
+import {combineReducers} from 'redux'
+import cardItems from "./reducers";
 
-const rootReducer = () => {
-  return (
-    <div>rootReducer</div>
-  )
-}
-
-export default rootReducer
+export default combineReducers({
+  cardItems
+})
