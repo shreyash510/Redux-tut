@@ -1,26 +1,31 @@
 import React from 'react'
 
-const Home = () => {
-  return (
-    // <h1>Home components</h1>
-    <>
-    <div className="cart relative">
-        <img className='absolute w-[5em] right-10' src="https://toppng.com/uploads/preview/shopping-cart-11530997216xsrc2jr32q.png"/>
-    </div>
-    <div className='wrapper text-center flex border w-[fit-content] flex-col' >
-    <div className="image">
-        <img className='w-[10em]' src="https://clipart.info/images/ccovers/1505918651the-iphone-x-ten-10-png.png"   />
-    </div>
-    <div className="">
-        <p className='text-2xl font-bold'>I-Phone</p>
-        <p className=''>Price: $1000.00</p>
-    </div>
-    <div>
-        <button style={{backgroundColor:'purple', color:'white'}} className="p-3 border rounded">Add to Cart</button>
-    </div>
-    </div>
-    </>
-  )
+function Home(props) {
+    return (
+        <div>
+           
+            <h1>Home Component</h1>
+            <div className="cart-wrapper">
+                <div className="img-wrapper item">
+                    <img src="https://clipart.info/images/ccovers/1505918651the-iphone-x-ten-10-png.png" />
+                </div>
+                <div className="text-wrapper item">
+                    <span>
+                        I-Phone
+                    </span>
+                    <span>
+                        Price: $1000.00
+                    </span>
+                </div>
+                <div className="btn-wrapper item">
+                    <button 
+                    onClick={
+                        ()=>{props.addToCartHandler({pice:1000,name:'i phone 11'})}
+                        }>
+                        Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    )
 }
-
 export default Home
